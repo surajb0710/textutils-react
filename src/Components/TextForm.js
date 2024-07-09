@@ -30,7 +30,7 @@ export default function TextForm(props) {
 
   const wordCount = () => {
     let count = 0;
-    text.split(" ").forEach((element) => {
+    text.split(/\s+/).forEach((element) => {
       if (element !== "") {
         count = count + 1;
       }
@@ -61,13 +61,13 @@ export default function TextForm(props) {
             }}
           ></textarea>
         </div>
-        <button className="btn btn-primary" onClick={resetForm}>
+        <button className="btn btn-primary my-1" onClick={resetForm}>
           Reset
         </button>
-        <button className="btn btn-primary" onClick={handleUpClick}>
+        <button className="btn btn-primary my-1" onClick={handleUpClick}>
           Convert to Uppercase
         </button>
-        <button className="btn btn-primary" onClick={handleLoClick}>
+        <button className="btn btn-primary my-1" onClick={handleLoClick}>
           Convert to Lowercase
         </button>
       </div>

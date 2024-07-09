@@ -8,9 +8,12 @@ function Navbar(props) {
         className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
       >
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
+          {/* <Link className="navbar-brand" to="/">
             {props.title}
-          </Link>
+          </Link> */}
+          <a className="navbar-brand" href="/">
+            {props.title}
+          </a>
           <button
             className="navbar-toggler"
             type="button"
@@ -31,15 +34,21 @@ function Navbar(props) {
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                {/* <Link className="nav-link active" aria-current="page" to="/">
                   {props.element1}
-                </Link>
+                </Link> */}
+                <a className="nav-link active" aria-current="page" href="/">
+                  {props.element1}
+                </a>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/about">
                   {props.element2}
                 </Link>
-              </li>
+                <Link className="nav-link" to="/about">
+                  {props.element2}
+                </Link>
+              </li> */}
             </ul>
             {/* <form className="d-flex" role="search">
               <input

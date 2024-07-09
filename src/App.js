@@ -36,16 +36,21 @@ function App() {
 
   return (
     <>
-      <Router>
-        <Navbar
-          title="TextUtils"
-          element1="Home"
-          element2="About Us"
-          mode={mode}
-          toggleMode={toggleMode}
-        />
-        <Alert alert={alert} />;<div className="container mb-3"></div>
-        <Routes>
+      {/* <Router> */}
+      <Navbar
+        title="TextUtils"
+        element1="Home"
+        // element2="About Us"
+        mode={mode}
+        toggleMode={toggleMode}
+      />
+      <Alert alert={alert} />;<div className="container mb-3"></div>
+      <TextForm
+        showAlert={showAlert}
+        heading="Enter the text to analyze below"
+        mode={mode}
+      />
+      {/* <Routes>
           <Route exact path="/about" element={<About />} />
           <Route
             exact
@@ -59,7 +64,7 @@ function App() {
             }
           />
         </Routes>
-      </Router>
+      </Router> */}
     </>
   );
 }
